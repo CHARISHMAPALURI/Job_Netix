@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap');
+
+        #maindiv{
+            display: flex;
+        }
+        #leftdiv{
+            flex: 1;
+        }
+        #rightdiv{
+            flex: 1;
+        }
+        #icon{
+            margin-top: 5px;
+            border-bottom: 2px solid black;
+        }
+        #ele{
+            /*font-family: 'Nunito', sans-serif;*/
+            /*font-family: 'Mooli', sans-serif;*/
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 25px;
+            padding: 10px 12px;
+            font-weight: bolder;
+            margin-right: 20px;
+            
+        }
+        #quote{
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            font-size: 35px;
+            font-family: 'Ysabeau Office', sans-serif;
+            font-weight: 700;
+        }
+        #logup{
+            position: absolute;
+            top: 45%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            font-size: 23px;
+            font-family: 'Nunito', sans-serif;
+        }
+        #signup{
+            float: right;
+            font-size: 10px;
+            font-size: 17px;
+            padding: 12px 14px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+        #signup:hover{
+            text-decoration: underline;
+        }
+        #log{
+            position: absolute;
+            top: 58%;
+            left: 23%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-family: 'Nunito', sans-serif;
+            border: 2px solid #1171ba;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="leftdiv">
+            <img src="https://img.icons8.com/ios-filled/50/1171ba/hire-me.png" width="40px" height="40px" id="icon">
+            <span id="ele">Job Netix</span>
+            <p id="quote">Welcome, Find your dream job!!!</p>
+            <p id="logup">Login or Signup to continue</p>
+            <p id="log"><a href="/signup" id="signup">Signup</a><a href="/login" id="signup" style="background-color: #1171ba;">Login</a></p>
+        </div>
+        <div id="rightdiv">
+            <img src="https://img.freepik.com/free-vector/recruit-agent-analyzing-candidates_74855-4565.jpg?w=1060&t=st=1695657810~exp=1695658410~hmac=2a29dd499b218810688a3a29e924403602f3b3977e633f72c952990defe21d28" height="560px">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+            #box1{
+                font-family: 'Kanit', sans-serif;
+                border-top: 2px solid black;
+                border-left: 2px solid #1171ba;
+                box-shadow: 8px 8px 8px 4px rgb(192 192 192);
+                width: 380px;
+                height: 500px;
+                border-radius: 20px;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+            }
+            button{
+                border: none;
+                background-color: transparent;
+                background-color: #1171ba;
+                border-radius: 30px;
+                padding: 10px 10px;
+                width: 260px;
+                height: 50px;
+                font-size: 15px;
+            }
+            form{
+                margin-left: 40px;
+            }
+            .input{
+                font-size: 15px;
+                border: none;
+                border-bottom: 1px solid black;
+                width: 250px;
+                outline: none;
+                padding: 5px;
+            }
+            #user{
+                position: absolute;
+                top: -50px;
+                left: calc(50% - 50px);
+            }
+            #mail{
+                position: absolute;
+                right: 58px;
+            }
+            #signuptext{
+                font-size: 15px;
+            }
+            #msg{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            font-size: 20px;
+            color: red;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="box2">
+            <img  src="https://static.vecteezy.com/system/resources/previews/001/503/683/original/business-people-avatars-cartoon-character-in-black-and-white-free-vector.jpg" width="600px" height="600px"/>
+        <div id="box1">
+            <img width="84" height="84" id="user" src="https://img.icons8.com/cotton/64/user-male-circle.png" alt="user-male-circle"/>
+            <br><center><h1>Sign Up</h1></center>
+            <form method="POST" action="/signupsubmit">
+            <input type="text" name="fname" id="id3" placeholder="Firstname" class="input"><br><br>
+            <input type="text" name="lname" id="id4" placeholder="Lastname" class="input"><br><br>
+            <input type="email" name="username" id="id1" placeholder="Email" class="input"><br><br>
+            <input type="password" name = "pswd" class="input" id="myInput" placeholder="Password" class="input"><br>
+            <p id="signuptext"><input type="checkbox" onclick="myFunction()">Show Password</p>
+            <button>Signup</button></center>
+            </form>
+            <center><p id="signuptext">Already have an account? <a href="/login">Login</a></p>
+            <p id="msg"><%=msg2%></p> 
+        </div>
+        </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myInput");
+          if (x.type === "password") {
+              x.type = "text";
+          } else {
+              x.type = "password";
+          }
+        }
+      </script>
+    </body>
+</html>

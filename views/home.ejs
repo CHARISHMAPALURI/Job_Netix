@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+        body{
+            font-family: 'Nunito', sans-serif;
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            font-family: 'Nunito', sans-serif;
+        }
+        #ele{
+          font-family: 'Dela Gothic One', cursive;
+          font-weight: bolder;
+          font-size: 25px;
+          padding: 10px 16px;
+          font-weight: bolder;
+          margin-right: 20px;
+        }
+        span{
+          float: left;
+        }
+        .job{
+          display: block;
+          font-size: 17px;
+          padding: 14px 16px;
+          text-decoration: none;
+          color: black;
+        }
+        #quote{
+            font-size: 30px;
+            /*font-family: 'Nunito', sans-serif;*/
+            font-family: 'Ysabeau Office', sans-serif;
+            /*ont-family: 'Cormorant', serif;*/
+            text-align: center;
+            color: white;
+        }
+        form{
+            text-align: center;
+        }
+        input{
+            width: 700px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 30px;
+            text-align: center;
+            border: 3px solid #1171ba;
+          outline: none;
+        }
+        input:focus{
+            border: 3px solid #1171ba;
+        }
+        #qblck{
+          background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg?w=996&t=st=1695735040~exp=1695735640~hmac=b01ad970d6d59255d55f736b0e0abe184aab7b4f9b485539b095ad58a501e907);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          margin-top: -5px;
+          height:520px; 
+        }
+        #childqblck{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #searc{
+            background-color:#1171ba;
+            color: white;
+            width: 70px;
+            height: 35px;
+            border-radius: 30px;
+            font-size: 15px;
+        }
+        .job:hover{
+          border-bottom: 2px solid #1171ba;
+        }
+        #profile{
+            position: absolute;
+            right: 15px;
+            font-size: 17px;
+            padding: 5px;
+        }
+        #profile:hover{
+            border-radius: 50%;
+            box-shadow: 9px 1px 3px 0 grey inset;
+        }
+      #company{
+            height: 300px;
+            padding-top: 50px;
+        }
+        #company-infoleft{
+            float: left;
+            margin-left: 50px;
+        }
+        #company-inforight{
+            float: right;
+        }
+        #company-logoright{
+            float: right;
+            margin-right: 50px;
+        }
+        #company-logoleft{
+            float: left;
+            margin-left: 50px;
+        }
+        #company a{
+            background-color: #1171ba;
+            border-radius: 5px;
+            color: black;
+            text-decoration: none;
+            padding: 5px;
+        }
+        #company a:hover{
+            background-color: #60b3f2;
+        }
+        #viewmore{
+            border: 2px solid #1171ba;
+            border-radius: 5px;
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+        #viewmore:hover{
+            background-color: #1171ba;
+        }
+        .sec-1,.sec-2,.sec-3,.sec-4 .animate{
+            transition: 1s;
+        }
+        .sec-1,.sec-2,.sec-3,.sec-4 .animate{
+            transform: scale(.8);
+        }
+        .sec-1.show-animate,.sec-2.show-animate,.sec-3.show-animate,.sec-4.show-animate .animate{
+            transform: scale(1);
+
+        }
+        #follogo{
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+        }
+        #star{
+            color: #1171ba;
+        }
+        #foot{
+            display: flex;
+        }
+        .icon{
+            margin-left: 10px;
+        }
+        #icon1:hover{
+            content:url(https://img.icons8.com/ios-glyphs/30/1171ba/linkedin.png);
+        }
+        #icon2:hover{
+            content:url(https://img.icons8.com/ios-glyphs/30/1171ba/instagram-new.png);
+        }
+        #icon3:hover{
+            content:url(https://img.icons8.com/fluency-systems-filled/48/1171ba/facebook-new.png);
+        }
+        #icon4:hover{
+            content:url(https://img.icons8.com/metro/26/1171ba/twitter.png);
+        }
+        #help{
+            margin-left: 50px;
+        }
+        .job:hover{
+          border-bottom: 2px solid #1171ba;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="navbar">
+          <span style="margin-left: 20px;">
+            <span><img src="https://img.icons8.com/ios-filled/50/1171ba/hire-me.png" width="40px" height="40px" style="border-bottom: 2px solid black;"></span>
+            <span id="ele">Job Netix</span></span>
+            <span><a href="#quote" class="job">Jobs</a></span>
+            <span><a href="#company" class="job">Companies</a></span>
+            <span><a href="#"><img width="40" height="40" src="https://img.icons8.com/fluency-systems-regular/48/1171ba/user-male-circle--v1.png" alt="user-male-circle--v1" title="Profile" id="profile"/></a></span>
+        </div>
+    <br><br><br>
+    <div id="qblck">
+        <div id="childqblck">
+         <p id="quote">Choose a job you love,<br> and you will never have to work a day in your life!!!</p><br>
+    <form method="POST" action="/search">
+        <input type="search" placeholder="Search for job title" name="job"><br><br><br>
+        <button id="searc">Search</button>
+    </form></div><br><br>
+    </div>
+    </div>
+  <div>
+    
+  </div>
+  <br>
+    <p style="font-size: 25px;">Top Hiring Companies</p>
+    <div>
+    <section id="company" class="sec-1 show-animate">
+        <div class="animate">
+        <p id="company-infoleft">Accenture plc is an Irish-American professional services company based in Dublin,<br> specializing in information technology (IT) services and consulting.<br> A Fortune Global 500 company, it reported revenues of $61.6 billion in 2022.<br> Accenture's current clients include 91 of the Fortune Global 100 and <br>more than three-quarters of the Fortune Global 500.<br> <br>
+            <b>Rating:</b>&nbsp;<b id="star">4.1&#9733;</b>&emsp;&#x7c;&emsp;<b>Locations:</b>&nbsp;37 office locations&emsp;&#x7c;&emsp;<b>Industry:</b>&nbsp;Business Consulting<br><br>
+            <a href="https://www.accenture.com/in-en/careers?c=car_glb_semtalentbrandpgoogle_13694678&n=psgs_0523&src=inFY23pscgoogle&gclid=CjwKCAjwpJWoBhA8EiwAHZFzfjyin1oC9cC4SnRHWX2k_zI1oCLRkJJ0Mboqdabvn5FHD9iTvG2uIxoCIaYQAvD_BwE&gclsrc=aw.ds" target="_blank">Accenture job portal</a></p>
+        <img src="https://images.livemint.com/img/2023/03/23/1600x900/Accenture_1679427786760_1679597580728_1679597580728.jpg" height="250px" width="400px" id="company-logoright"/>
+        </div>
+    </section>
+
+    <section id="company" class="sec-2">
+        
+        <p class="animate" id="company-inforight">The International Business Machines Corporation,<br> nicknamed Big Blue, is an American multinational technology corporation <br>headquartered in Armonk, New York and is present in over 175 countries.<br>It specializes in computer hardware, middleware, and software, and provides hosting and <br>consulting services in areas ranging from mainframe computers to nanotechnology<br><br>
+            <b>Rating:</b>&nbsp;<b id="star">4.1&#9733;</b>&emsp;&#x7c;&emsp;<b>Locations:</b>&nbsp;37 office locations&emsp;&#x7c;&emsp;<b>Industry:</b>&nbsp;Information Technology Support <br>Services<br><br>
+            <a href="https://www.ibm.com/careers/in-en/search/" target="_blank">IBM job portal</a></p>
+        <img class="animate" src="https://www.electronicsb2b.com/wp-content/uploads/2023/08/IBM.jpg" height="250px" width="400px" id="company-logoleft"/>
+    </section>
+    
+    <section id="company" class="sec-3"> 
+        <div class="animate">
+        <p id="company-infoleft">Cognizant is an American multinational<br> information technology services and consulting company.<br> It is headquartered in Teaneck, New Jersey, U.S.<br> Cognizant is part of the NASDAQ-100 and trades under CTSH.<br>Cognizant had a period of fast growth during the 2000s and became a Fortune 500 <br>company in 2011; as of 2021, it is ranked 185<br><br>
+        <b>Rating:</b>&nbsp;<b id="star">3.8&#9733;</b>&emsp;&#x7c;&emsp;<b>Locations:</b>&nbsp;27 office locations&emsp;&#x7c;&emsp;<b>Industry:</b>&nbsp;Information Technology Support Services<br><br>
+            <a href="https://careers.cognizant.com/global/en" target="_blank">Cognizant job portal</a></p>
+        <img src="https://images.cnbctv18.com/wp-content/uploads/2018/03/cognizant-PTI-e1522288861817.gif?im=FitAndFill,width=1200,height=900" height="250px" width="400px" id="company-logoright"/>
+        </div>
+    </section>
+
+    <section id="company" class="sec-4">
+        <div class="animate">
+        <p id="company-inforight">Amazon.com, Inc. is an American multinational technology company<br> focusing on e-commerce, cloud computing, online advertising, <br>digital streaming, and artificial intelligence<br>As of 2023, it is the world's largest online retailer and marketplace,<br> smart speaker provider, cloud computing service through AWS, live-streaming service <br>through Twitch, and Internet company as measured by revenue and market share<br><br>
+            <b>Rating:</b>&nbsp;<b id="star">4.1&#9733;</b>&emsp;&#x7c;&emsp;<b>Locations:</b>&nbsp;65 office locations&emsp;&#x7c;&emsp;<b>Industry:</b>&nbsp;Internet & Web Services<br><br>
+            <a href="https://www.amazon.jobs/en/" target="_blank">Amazon job portal</a></p>
+        <img src="https://s.abcnews.com/images/International/amazon-paris-1file-gty-ml-200415_hpMain_16x9_992.jpg" height="250px" width="400px" id="company-logoleft"/>
+        </div>
+    </section></div>
+    <br><br>
+    <center><a href="https://www.glassdoor.co.in/Explore/top-information-technology-companies_ID.4,26_IDEPT1011.htm" id="viewmore">View More >>></a></center><br><br><br>
+    <hr style="background-color: #1171ba; height: 0.1px;"><br><br>
+    <footer>
+        <section>
+            <div id="foot">
+                <span><img src="https://img.icons8.com/ios-filled/50/1171ba/hire-me.png" width="40px" height="40px" style="border-bottom: 2px solid black;"></span>
+                <span id="ele">Job Netix</span>
+                <div id="connect">Connect with us<br><br>
+                <nav>
+                    <a href=""><img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/48/1171ba/linkedin.png" alt="linkedin" id="icon1" class="icon"/></a>
+                    <a href=""><img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/48/1171ba/instagram-new--v1.png" alt="instagram-new--v1" id="icon2" class="icon"/></a>
+                    <a href=""><img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/48/1171ba/facebook-new--v1.png" alt="facebook-new--v1" id="icon3" class="icon"/></a>
+                    <a href=""><img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/48/1171ba/twitter.png" alt="twitter" id="icon4" class="icon"/></a>
+                </nav>
+            </div>
+            <div id="help">Help<br><br>Contact Us</div>
+            </div>
+        </section>
+    </footer>
+    <br>
+    <script>
+        let sections = document.querySelectorAll('section');
+        window.onscroll = () => {
+            sections.forEach(sec =>{
+                let top = window.scrollY;
+                let offset = sec.offsetTop-150;
+                let height = sec.offsetHeight;
+                if(top >= offset && top < offset + height){
+                    sec.classList.add('show-animate');
+                }
+                else{
+                    sec.classList.remove('show-animate');
+                }
+            })
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

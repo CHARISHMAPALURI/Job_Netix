@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+      body{
+        font-family: 'Nunito', sans-serif;
+        overflow: auto;
+      }
+      body::-webkit-scrollbar{
+        display: none;
+      }
+      #webname{
+        display: block;
+        float: left;
+        font-size: 25px;
+        padding: 10px 16px;
+        font-weight: bolder;
+        margin-right: 20px;
+        font-family: 'Dela Gothic One', cursive;
+      }
+      #navelements{
+        display: block;
+        float: left;
+        font-size: 17px;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+      }
+      #navelements:hover{
+        border-bottom: 2px solid #1171ba;
+      }
+      #mainblck{
+        display: flex;
+        justify-content: space-around;
+      }
+      #input-field{
+        position: relative;
+        width: 400px;
+        height: 35px;
+        font-size: 18px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #1171ba;
+      }
+      button{
+        position: absolute;
+        left: 774px;
+        border: none;
+        background-color: transparent;
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        width: 70px;
+        height: 35px;
+        border-radius: 30px;
+        font-size: 15px;
+      }
+      #joblist {
+        flex: 0.5;
+        border-radius: 10px;
+        /*box-shadow: 0px 3px 20px 5px #474747;*/
+        padding: 30px;
+        margin-bottom: 100px;
+        margin-left: 10px;
+        padding-left: 50px;
+        overflow-y: scroll;
+        height: 520px;
+        box-shadow: 0 8px 8px 4px rgb(192 192 192);
+        border-left: 1px solid black;
+        border-top: 1px solid #1171ba;
+      }
+      #joblist::-webkit-scrollbar{
+        display: none;
+      }
+      .job-item{
+        margin-left: 10px;
+        font-size: 15px;
+        color: #474747;
+        margin-bottom: 30px;
+      }
+      #job-details {
+        flex: 1;
+        background-image: url("https://img.freepik.com/free-vector/woman-working-telecommuting-inside-house_23-2148503808.jpg?w=740&t=st=1695664838~exp=1695665438~hmac=26f848fe5100b9871f36a9bf583993ec47b98d81a68abfc2dad05958c2b5c91e");
+        background-size: cover;
+        background-position: center;
+        margin-left: 40px;
+        margin-top: 10px;
+        border-radius: 10px;
+        overflow-y: scroll;
+        height: 560px;
+        
+      }
+        #job-details::-webkit-scrollbar{
+          display: none;
+        }
+        .job-title{
+          font-size: 20px;
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+          margin-top: 10px;
+        }
+      .job-title:hover{
+        text-decoration: underline;
+      }
+      #compname{
+        color: #1171ba;
+      }
+      #anc{
+        color: #474747;
+      }
+      #apply{
+        float: right;
+        text-decoration: none;
+        background-color: #1171ba;
+        border-radius: 30px;
+        color: black;
+        width: 70px;
+        height: 40px;
+        font-weight: none;
+        text-align: center;
+        padding-top: 10px;
+      }
+      #apply:hover{
+        background-color: white;
+        border: 2px solid #1171ba;
+      }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+      <span id="logo" style="float: left;"><img src="https://img.icons8.com/ios-filled/50/1171ba/hire-me.png" width="40px" height="40px" style="border-bottom: 2px solid black;"></span>
+      <span id="webname">Job Netix</span>
+      <span ><a href="#home" id="navelements" class="job">Jobs</a></span>
+      <span ><a href="#home" id="navelements" class="comp">Companies</a></span>
+      <form method="POST" action="/search">
+      <input type="text" value="<%= job %>" id="input-field" name="job"><button><img width="39" height="39" src="https://img.icons8.com/fluency-systems-filled/48/1171ba/google-web-search.png" alt="google-web-search"/></button></form>
+  </div>
+  <br><br>
+  <div id="mainblck">
+        <div id="joblist">
+            <% for (let i = 0; i < jobarray.length; i++) { %>
+              <a href="#" class="job-title" data-index="<%= i %>"><%= jobarray[i].title %></a>
+                <div class="job-item">
+                    <p><img width="16" height="16" src="https://img.icons8.com/small/16/1171ba/company.png" alt="company"/>&nbsp;
+<%= jobarray[i]['companyName']%> &#x7c; &nbsp;<%= jobarray[i]['contractType'] %></p>
+                  
+                    <p> <img width="16" height="16" src="https://img.icons8.com/windows/32/1171ba/rupee.png" alt="rupee"/>&nbsp;<%= jobarray[i]['salary'] %></p>
+                    <p><img width="16" height="16" src="https://img.icons8.com/windows/32/1171ba/suitcase.png" alt="suitcase"/>&nbsp;<%= jobarray[i]['experienceLevel'] %></p>
+                    <p><img width="16" height="16" src="https://img.icons8.com/material-rounded/24/1171ba/place-marker.png" alt="place-marker"/>&nbsp; <%= jobarray[i]['location'] %></p>
+                </div>
+                <hr>
+            <% } %>
+        </div>
+        <div id="job-details">
+            <% for (let i = 0; i < jobarray.length; i++) { %>
+                <div class="job-details" id="job-details-<%= i %>" style="display: none;">
+                  <p class="job-title"><%= jobarray[i].title %> </p>
+                  <p><a href="<%= jobarray[i].jobUrl %>" target="_blank" id="apply">Apply</a></p>
+                  <p><a href="<%= jobarray[i].companyUrl %>" target="_blank" id="compname"><%= jobarray[i].companyName %></a></p>
+                  <p id="anc"><img width="16" height="16" src="https://img.icons8.com/material-rounded/24/1171ba/place-marker.png" alt="place-marker"/>&nbsp; <%= jobarray[i].location %></p>
+                  <p id="anc"><img width="16" height="16" src="https://img.icons8.com/windows/32/1171ba/rupee.png" alt="rupee"/>&nbsp; <%= jobarray[i].salary %></p>
+                  <p><span id="anc">Experience</span>&nbsp;:&nbsp;<strong><%= jobarray[i].experienceLevel %></strong>&emsp;&#x7c;&emsp;<span id="anc">Posted</span>&nbsp;:&nbsp;<strong><%= jobarray[i].postedTime %></strong>&emsp;&#x7c;&emsp;<span id="anc">Applicants</span>&nbsp;:&nbsp;<strong><%= jobarray[i].applicationsCount %></strong></p>
+                  <p><strong>Description:<br><br></strong><span id="anc"> <%= jobarray[i].description %> </span> </p>
+                  <p><strong>Work Type:</strong> <span id="anc"><%= jobarray[i].workType %></span></p>
+                  <p><strong>Sector:</strong> <span id="anc"><%= jobarray[i].sector %></span></p>
+                  
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <script>
+        const jobTitles = document.querySelectorAll('.job-title');
+        const jobDetails = document.querySelectorAll('.job-details');
+
+        jobTitles.forEach(title => {
+            title.addEventListener('click', (event) => {
+                event.preventDefault();
+                const index = title.getAttribute('data-index');
+                jobDetails.forEach(detail => {
+                    detail.style.display = 'none';
+                });
+                jobDetails[index].style.display = 'block';
+                jobDetails[index].style.backgroundColor = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
