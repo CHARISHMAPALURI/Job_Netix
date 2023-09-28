@@ -35,7 +35,7 @@ const options = {
   url: 'https://linkedin-jobs-scraper-api.p.rapidapi.com/jobs',
   headers: {
     'content-type': 'application/json',
-    'X-RapidAPI-Key': '27888810famsh58fbd5980bab239p10cb63jsnbc78860760c7',
+    'X-RapidAPI-Key': '5cd0bfca0fmsh83b264ca43af18ep133555jsnd42e88b63c4b',
     'X-RapidAPI-Host': 'linkedin-jobs-scraper-api.p.rapidapi.com'
   },
   data: {
